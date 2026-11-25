@@ -1,0 +1,38 @@
+DISEASE RISK PREDICTION AND PERFORMANCE ANALYSIS
+Individual Data Analytics Mini-Project
+
+OBJECTIVE
+Explore the Early Stage Diabetes Risk Prediction dataset, train Logistic Regression, and evaluate classification performance.
+
+DATASET
+Early Stage Diabetes Risk Prediction dataset from UCI.
+Original records: 520; features: 16; target: class.
+Dataset source: https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset
+
+METHODOLOGY
+1. Load and inspect dataset.
+2. Remove duplicate rows and trim text.
+3. Encode categorical columns.
+4. Visualize class distribution, symptoms, age and correlations.
+5. Stratified 80/20 train/test split (random_state=42).
+6. Train Logistic Regression.
+7. Evaluate with confusion matrix and standard metrics.
+
+RESULTS FROM THE UPLOADED NOTEBOOK OUTPUT
+Test set size: 51
+Confusion matrix (actual rows, predicted columns):
+                  Predicted Negative  Predicted Positive
+Actual Negative          14                 2
+Actual Positive           7                28
+
+TN=14, FP=2, FN=7, TP=28
+Accuracy: 82.35%
+Precision: 93.33%
+Recall: 80.00%
+F1-Score: 86.15%
+
+INTERPRETATION
+42 of 51 test samples were correctly classified. Precision is 93.33% and recall is 80% on this test split. The confusion matrix contains 7 false negatives and 2 false positives.
+
+LIMITATIONS
+The notebook's executed cleaning removed duplicates and reduced 520 rows to 251; review this step before final submission because the reduction is substantial. Results reflect one train/test split and may vary. The dataset is small and collected from a single hospital setting. This is for academic demonstration only, not medical diagnosis.
